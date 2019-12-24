@@ -1,0 +1,50 @@
+<div class="container" style="padding-top: 80px;">
+  <div class="row justify-content-center"></div>
+  <div class="row">
+    <div class="col-sm-8">
+      <table>
+        <th>Title</th>
+        <th>cost</th>
+        <th>Total</th>
+        <tr *ngFor="let detail of buy | async">
+          <td>{{ detail.title }}</td>
+          <td>{{ detail.cost }}</td>
+          <td>{{ detail.cost }}</td>
+        </tr>
+      </table>
+
+      <p>{{ tempTotal }}</p>
+    </div>
+    <div class="col-sm-4" style="background-color: #424242">
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Full Name"
+          [(ngModel)]="customerName"
+          required="true"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Address"
+          required="true"
+          [(ngModel)]="customerAddress"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Card No"
+          required="true"
+          [(ngModel)]="cardNumber"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <button type="button" mat-raised-button (click)="order()">
+      Order
+    </button>
+  </div>
+</div>

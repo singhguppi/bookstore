@@ -1,0 +1,29 @@
+<div class="container" style="padding-top: 80px;">
+  <div class="row">
+    <h1>{{ bookTitle }}</h1>
+  </div>
+  <div class="row" style="padding-top: 50px">
+    <div class="col-sm-8">
+      <div class="row" *ngFor="let detail of details | async">
+        <div class="col-sm-4" *ngIf="detail.id == bookId">
+          <img [src]="detail.thumbnailUrl" style="width: 50%" />
+          <p><b>Cost</b> : {{ detail.price }}</p>
+        </div>
+        <div class="col-sm-8" *ngIf="detail.id == bookId">
+          <p><b>Authors</b> : {{ detail.authors }}</p>
+          <p><b>PageCount</b> : {{ detail.pageCount }}</p>
+          <b style="font-size: 20px">Description :</b>
+          <p style="font-size:16px !important">{{ detail.longDescription }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <button type="button" mat-raised-button (click)="buyNow()">
+        Buy now
+      </button>
+      <button type="button" mat-raised-button (click)="addToCart()">
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>

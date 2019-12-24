@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" class="fixed-top">
+  <div class="container">
+    <button type="button" mat-button (click)="homeclicked()">
+      <mat-icon class="home">home</mat-icon>
+      Home
+    </button>
+    <button mat-button type="button" (click)="myorders()">
+      My Orders
+    </button>
+    <button
+      mat-button
+      type="button"
+      (click)="cartItems()"
+      style="font-size:12px"
+    >
+      <mat-icon class="material-icons">shopping_cart</mat-icon
+      >{{ count | async }}
+    </button>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

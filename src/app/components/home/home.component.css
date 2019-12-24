@@ -1,0 +1,30 @@
+.card {
+  height: 338px;
+  width: 220px;
+}
+.col-sm-2 {
+  margin: 19px;
+}
+.card-header {
+  height: 80px;
+  font-weight: 700;
+}
+.card footer {
+  font-weight: 500;
+}
+.mat-toolbar.mat-primary {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+}
+img {
+  width: 50%;
+}
+.loading {
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}

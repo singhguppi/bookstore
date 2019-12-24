@@ -1,0 +1,10 @@
+button {
+  font-size: 20px;
+  font-weight: 700;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.cart-btn {
+  font-size: 12px;
+}

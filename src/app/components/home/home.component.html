@@ -1,0 +1,30 @@
+<div class="container" style="padding-top: 80px;">
+  <div [hidden]="loading" class="loading">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div class="row">
+    <div class="col-sm-2" *ngFor="let name of apiBooksData">
+      <div
+        class="card text-center"
+        (click)="
+          bookDetail(
+            name._id,
+            name.title,
+            name.pageCount,
+            name.thumbnailUrl,
+            name.longDescription,
+            name.authors,
+            name.price,
+            name.publishedDate
+          )
+        "
+      >
+        <div class="card-header">{{ name.title }}</div>
+        <div class="card-body">
+          <img [src]="name.thumbnailUrl" />
+        </div>
+        <footer>Author:{{ name.authors }}</footer>
+      </div>
+    </div>
+  </div>
+</div>

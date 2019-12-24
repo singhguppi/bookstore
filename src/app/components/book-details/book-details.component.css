@@ -1,0 +1,15 @@
+ul {
+  list-style-type: none;
+}
+button {
+  margin-left: 5px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 20px;
+}
+li {
+  font-size: 20px;
+  font-weight: 500;
+}
